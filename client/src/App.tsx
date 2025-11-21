@@ -19,7 +19,6 @@ function App() {
   const [lastEmotionLabel, setLastEmotionLabel] = useState<string>("");
 
   const handleEmotionClick = (emotionId: string) => {
-    console.log("Emotion clicked:", emotionId, "Current time of day:", currentTimeOfDay);
     if (!currentTimeOfDay) {
       alert("Please select a time of day first! 🌅☀️🌙");
       return;
@@ -37,15 +36,6 @@ function App() {
       }, 2000);
     }
   };
-
-  const handleTimeSelect = (time: TimeOfDay) => {
-    console.log("Time of day selected:", time);
-    setCurrentTimeOfDay(time);
-  };
-
-  useEffect(() => {
-    console.log("Current time of day updated:", currentTimeOfDay);
-  }, [currentTimeOfDay]);
 
   const handleClearDay = () => {
     if (selectedEmotions.length > 0) {
@@ -120,7 +110,7 @@ function App() {
           </motion.h2>
           <TimeOfDaySelector
             selectedTime={currentTimeOfDay}
-            onSelectTime={handleTimeSelect}
+            onSelectTime={setCurrentTimeOfDay}
           />
         </div>
 

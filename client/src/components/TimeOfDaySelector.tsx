@@ -28,19 +28,12 @@ const TIME_OPTIONS: { id: TimeOfDay; label: string; emoji: string; gradient: str
 ];
 
 export function TimeOfDaySelector({ selectedTime, onSelectTime }: TimeOfDaySelectorProps) {
-  const handleClick = (timeId: TimeOfDay) => {
-    console.log("TimeOfDaySelector button clicked:", timeId);
-    onSelectTime(timeId);
-  };
-
-  console.log("TimeOfDaySelector rendering with selectedTime:", selectedTime);
-
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full px-4">
       {TIME_OPTIONS.map((time) => (
         <motion.button
           key={time.id}
-          onClick={() => handleClick(time.id)}
+          onClick={() => onSelectTime(time.id)}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="relative flex items-center justify-center gap-3 px-6 sm:px-8 py-4 sm:py-6 rounded-2xl shadow-xl cursor-pointer transition-all border-4 w-full sm:w-auto min-w-[200px]"
