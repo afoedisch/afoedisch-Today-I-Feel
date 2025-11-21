@@ -58,10 +58,10 @@ function App() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 overflow-auto">
+    <div className="w-full h-screen bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 overflow-y-auto overflow-x-hidden">
       <SoundManager />
       
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 pb-20">
         {/* Header */}
         <motion.div
           initial={{ y: -50, opacity: 0 }}
