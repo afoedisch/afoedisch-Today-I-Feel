@@ -1,10 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useAudio } from "@/lib/stores/useAudio";
 
 export function SoundManager() {
   const { setHitSound, setSuccessSound, setBackgroundMusic } = useAudio();
+  const initialized = useRef(false);
 
   useEffect(() => {
+    if (initialized.current) return;
+    
+    initialized.current = true;
+    
     // Load sounds
     const hitSound = new Audio("/sounds/hit.mp3");
     const successSound = new Audio("/sounds/success.mp3");
@@ -20,6 +25,12 @@ export function SoundManager() {
     setBackgroundMusic(bgMusic);
     
     console.log("Sound manager initialized");
+    
+    // Cleanup on unmount
+    return () => {
+      bgMusic.pause();
+      bgMusic.src = "";
+    };
   }, [setHitSound, setSuccessSound, setBackgroundMusic]);
 
   return null;

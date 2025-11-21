@@ -13,7 +13,7 @@ import { Sparkles, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import "@fontsource/inter";
 
 function App() {
-  const { currentTimeOfDay, setCurrentTimeOfDay, selectEmotion, toggleSummary, clearDay, selectedEmotions } = useEmotions();
+  const { currentTimeOfDay, setCurrentTimeOfDay, selectEmotion, setShowSummary, clearDay, selectedEmotions } = useEmotions();
   const { playSuccess, toggleMute, isMuted } = useAudio();
   const [showMessage, setShowMessage] = useState(false);
   const [lastEmotionLabel, setLastEmotionLabel] = useState<string>("");
@@ -73,7 +73,7 @@ function App() {
         {/* Control Buttons */}
         <div className="flex flex-wrap gap-3 justify-center mb-8">
           <Button
-            onClick={toggleSummary}
+            onClick={() => setShowSummary(true)}
             size="lg"
             className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold text-lg px-6 py-6 rounded-xl shadow-lg"
           >

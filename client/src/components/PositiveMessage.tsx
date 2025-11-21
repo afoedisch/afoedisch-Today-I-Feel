@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
 
 interface PositiveMessageProps {
   show: boolean;
@@ -20,13 +20,14 @@ const ENCOURAGEMENTS = [
 ];
 
 export function PositiveMessage({ show, emotionLabel }: PositiveMessageProps) {
-  const message = useMemo(() => {
-    const randomEncouragement = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
-    if (emotionLabel) {
-      return `You felt ${emotionLabel}! ${randomEncouragement}`;
+  const [message, setMessage] = useState("");
+  
+  useEffect(() => {
+    if (show && emotionLabel) {
+      const randomEncouragement = ENCOURAGEMENTS[Math.floor(Math.random() * ENCOURAGEMENTS.length)];
+      setMessage(`You felt ${emotionLabel}! ${randomEncouragement}`);
     }
-    return randomEncouragement;
-  }, [emotionLabel]);
+  }, [show, emotionLabel]);
 
   return (
     <AnimatePresence>

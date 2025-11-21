@@ -9,12 +9,14 @@ const TIME_LABELS: Record<TimeOfDay, { label: string; emoji: string }> = {
 };
 
 export function EmotionSummary() {
-  const { showSummary, toggleSummary, selectedEmotions } = useEmotions();
+  const { showSummary, setShowSummary, selectedEmotions } = useEmotions();
 
   if (!showSummary) return null;
 
   const emotionCount = selectedEmotions.length;
   const uniqueEmotions = new Set(selectedEmotions.map(e => e.emotion.type)).size;
+  
+  const handleClose = () => setShowSummary(false);
 
   return (
     <motion.div
@@ -22,7 +24,7 @@ export function EmotionSummary() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-      onClick={toggleSummary}
+      onClick={handleClose}
     >
       <motion.div
         initial={{ scale: 0, rotate: -180 }}
@@ -39,7 +41,7 @@ export function EmotionSummary() {
             </h2>
           </div>
           <button
-            onClick={toggleSummary}
+            onClick={handleClose}
             className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors"
           >
             <X className="w-6 h-6" />

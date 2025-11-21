@@ -51,7 +51,7 @@ interface EmotionState {
   selectEmotion: (emotion: Emotion, timeOfDay: TimeOfDay) => void;
   removeEmotion: (id: string) => void;
   setCurrentTimeOfDay: (timeOfDay: TimeOfDay | null) => void;
-  toggleSummary: () => void;
+  setShowSummary: (show: boolean) => void;
   clearDay: () => void;
   getEmotionsForTime: (timeOfDay: TimeOfDay) => SelectedEmotion[];
 }
@@ -86,8 +86,8 @@ export const useEmotions = create<EmotionState>()(
       set({ currentTimeOfDay: timeOfDay });
     },
     
-    toggleSummary: () => {
-      set((state) => ({ showSummary: !state.showSummary }));
+    setShowSummary: (show) => {
+      set({ showSummary: show });
     },
     
     clearDay: () => {
