@@ -11,7 +11,8 @@ export type EmotionType =
   | "silly" 
   | "proud" 
   | "scared" 
-  | "loved";
+  | "loved"
+  | "other";
 
 export type TimeOfDay = "morning" | "afternoon" | "evening";
 
@@ -21,6 +22,7 @@ export interface Emotion {
   emoji: string;
   color: string;
   label: string;
+  customLabel?: string;
 }
 
 export interface SelectedEmotion {
@@ -40,6 +42,7 @@ export const EMOTIONS: Emotion[] = [
   { id: "worried", type: "worried", emoji: "😰", color: "#C4B5FD", label: "Worried" },
   { id: "angry", type: "angry", emoji: "😠", color: "#F87171", label: "Angry" },
   { id: "scared", type: "scared", emoji: "😨", color: "#A78BFA", label: "Scared" },
+  { id: "other", type: "other", emoji: "✨", color: "#9CA3AF", label: "Other" },
 ];
 
 interface EmotionState {

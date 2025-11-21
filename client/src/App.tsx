@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEmotions, EMOTIONS, TimeOfDay } from "@/lib/stores/useEmotions";
 import { useAudio } from "@/lib/stores/useAudio";
@@ -8,6 +8,7 @@ import { EmotionTimeline } from "@/components/EmotionTimeline";
 import { PositiveMessage } from "@/components/PositiveMessage";
 import { EmotionSummary } from "@/components/EmotionSummary";
 import { SoundManager } from "@/components/SoundManager";
+import { CustomEmotionDialog } from "@/components/CustomEmotionDialog";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import "@fontsource/inter";
@@ -17,6 +18,7 @@ function App() {
   const { playSuccess, toggleMute, isMuted } = useAudio();
   const [showMessage, setShowMessage] = useState(false);
   const [lastEmotionLabel, setLastEmotionLabel] = useState<string>("");
+  const [showCustomDialog, setShowCustomDialog] = useState(false);
 
   const handleEmotionClick = (emotionId: string) => {
     if (!currentTimeOfDay) {
@@ -24,10 +26,37 @@ function App() {
       return;
     }
 
+    if (emotionId === "other") {
+      setShowCustomDialog(true);
+      return;
+    }
+
     const emotion = EMOTIONS.find(e => e.id === emotionId);
     if (emotion) {
       selectEmotion(emotion, currentTimeOfDay);
       setLastEmotionLabel(emotion.label);
+      setShowMessage(true);
+      playSuccess();
+
+      setTimeout(() => {
+        setShowMessage(false);
+      }, 2000);
+    }
+  };
+
+  const handleCustomEmotionSubmit = (customLabel: string) => {
+    if (!currentTimeOfDay) return;
+
+    const otherEmotion = EMOTIONS.find(e => e.id === "other");
+    if (otherEmotion) {
+      const customEmotion = {
+        ...otherEmotion,
+        id: `other-${crypto.randomUUID()}`,
+        customLabel,
+        label: customLabel,
+      };
+      selectEmotion(customEmotion, currentTimeOfDay);
+      setLastEmotionLabel(customLabel);
       setShowMessage(true);
       playSuccess();
 
@@ -181,6 +210,13 @@ function App() {
 
         {/* Summary Modal */}
         <EmotionSummary />
+
+        {/* Custom Emotion Dialog */}
+        <CustomEmotionDialog
+          open={showCustomDialog}
+          onOpenChange={setShowCustomDialog}
+          onSubmit={handleCustomEmotionSubmit}
+        />
       </div>
     </div>
   );
