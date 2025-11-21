@@ -35,12 +35,12 @@ export function CustomEmotionDialog({ open, onOpenChange, onSubmit }: CustomEmot
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md bg-gradient-to-br from-purple-100 to-pink-100 border-4 border-purple-300">
+      <DialogContent className="sm:max-w-md bg-gradient-to-br from-[#FFE0B2] to-[#B2EBF2] border-3 border-white/80 shadow-xl">
         <DialogHeader>
-          <DialogTitle className="text-3xl font-bold text-purple-700 text-center">
+          <DialogTitle className="text-3xl font-bold text-gray-700 text-center drop-shadow-sm">
             ✨ What Are You Feeling?
           </DialogTitle>
-          <DialogDescription className="text-lg text-purple-600 text-center">
+          <DialogDescription className="text-lg text-gray-600 text-center">
             Type in your own special feeling!
           </DialogDescription>
         </DialogHeader>
@@ -50,7 +50,7 @@ export function CustomEmotionDialog({ open, onOpenChange, onSubmit }: CustomEmot
             value={customEmotion}
             onChange={(e) => setCustomEmotion(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="text-lg px-4 py-6 border-2 border-purple-300 focus:border-purple-500 bg-white"
+            className="text-lg px-4 py-6 border-2 border-gray-300 focus:border-[#80CBC4] bg-white shadow-sm"
             maxLength={20}
             autoFocus
           />
@@ -58,7 +58,7 @@ export function CustomEmotionDialog({ open, onOpenChange, onSubmit }: CustomEmot
             <Button
               onClick={() => onOpenChange(false)}
               variant="outline"
-              className="flex-1 text-lg py-6 border-2 border-purple-300"
+              className="flex-1 text-lg py-6 border-2 border-gray-300 hover:bg-gray-50"
             >
               Cancel
             </Button>
@@ -66,7 +66,7 @@ export function CustomEmotionDialog({ open, onOpenChange, onSubmit }: CustomEmot
               <Button
                 onClick={handleSubmit}
                 disabled={!customEmotion.trim()}
-                className="w-full text-lg py-6 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold"
+                className="w-full text-lg py-6 bg-gradient-to-r from-[#FFB74D] to-[#80CBC4] hover:opacity-90 text-white font-semibold shadow-md"
               >
                 Add Feeling
               </Button>

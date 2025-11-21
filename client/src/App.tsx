@@ -112,7 +112,7 @@ function App() {
             variant="outline"
             className="bg-white/70 hover:bg-white/90 text-teal-700 font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white"
           >
-            <RotateCcw className="w-5 h-5 mr-2" />
+            <RotateCcw className="w-5 h-5 mr-2 text-teal-600" />
             New Day
           </Button>
           <Button
@@ -121,7 +121,7 @@ function App() {
             variant="outline"
             className="bg-white/70 hover:bg-white/90 text-teal-700 font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white"
           >
-            {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+            {isMuted ? <VolumeX className="w-5 h-5 text-teal-600" /> : <Volume2 className="w-5 h-5 text-teal-600" />}
           </Button>
         </div>
 
@@ -185,19 +185,19 @@ function App() {
               timeOfDay="morning"
               label="Morning"
               emoji="🌅"
-              gradient="linear-gradient(135deg, #FFA726 0%, #FFE082 100%)"
+              gradient="linear-gradient(135deg, #FFAB91 0%, #FFCC80 100%)"
             />
             <EmotionTimeline
               timeOfDay="afternoon"
               label="Afternoon"
               emoji="☀️"
-              gradient="linear-gradient(135deg, #42A5F5 0%, #90CAF9 100%)"
+              gradient="linear-gradient(135deg, #FFD54F 0%, #FFF59D 100%)"
             />
             <EmotionTimeline
               timeOfDay="evening"
               label="Evening"
               emoji="🌙"
-              gradient="linear-gradient(135deg, #5C6BC0 0%, #9FA8DA 100%)"
+              gradient="linear-gradient(135deg, #80DEEA 0%, #B2EBF2 100%)"
             />
           </motion.div>
         )}

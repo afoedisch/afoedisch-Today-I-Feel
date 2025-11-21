@@ -33,19 +33,18 @@ export function PositiveMessage({ show, emotionLabel }: PositiveMessageProps) {
     <AnimatePresence>
       {show && (
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          exit={{ scale: 0, rotate: 180 }}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
           className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none"
         >
           <motion.div
-            className="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white font-bold text-2xl sm:text-4xl px-8 py-6 rounded-3xl shadow-2xl border-4 border-white"
+            className="bg-gradient-to-r from-[#FFAB91] via-[#FFD54F] to-[#80DEEA] text-white font-bold text-2xl sm:text-4xl px-8 py-6 rounded-3xl shadow-xl border-3 border-white/80"
             animate={{
-              scale: [1, 1.1, 1],
-              rotate: [0, 5, -5, 0],
+              scale: [1, 1.05, 1],
             }}
             transition={{
-              duration: 0.5,
+              duration: 0.8,
               repeat: 2,
             }}
           >

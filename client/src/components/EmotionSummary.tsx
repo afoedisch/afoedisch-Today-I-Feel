@@ -27,24 +27,24 @@ export function EmotionSummary() {
       onClick={handleClose}
     >
       <motion.div
-        initial={{ scale: 0, rotate: -180 }}
-        animate={{ scale: 1, rotate: 0 }}
-        exit={{ scale: 0, rotate: 180 }}
-        className="bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400 rounded-3xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border-4 border-white"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0 }}
+        className="bg-gradient-to-br from-[#FFAB91] via-[#FFD54F] to-[#80DEEA] rounded-3xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl border-3 border-white/80"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <Sparkles className="w-8 h-8 text-yellow-300" />
-            <h2 className="text-white font-bold text-3xl drop-shadow-lg">
+            <Sparkles className="w-8 h-8 text-white drop-shadow-md" />
+            <h2 className="text-white font-bold text-3xl drop-shadow-md">
               Your Feelings Today
             </h2>
           </div>
           <button
             onClick={handleClose}
-            className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors"
+            className="bg-white/90 rounded-full p-2 hover:bg-white transition-colors shadow-md border border-gray-200"
           >
-            <X className="w-6 h-6" />
+            <X className="w-6 h-6 text-gray-600" />
           </button>
         </div>
 

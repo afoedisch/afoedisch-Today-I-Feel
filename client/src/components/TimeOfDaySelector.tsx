@@ -55,7 +55,7 @@ export function TimeOfDaySelector({ selectedTime, onSelectTime }: TimeOfDaySelec
           </div>
           {selectedTime === time.id && (
             <motion.div
-              className="absolute -top-2 -right-2 bg-white rounded-full p-2"
+              className="absolute -top-2 -right-2 bg-white/95 rounded-full p-2 shadow-md border border-gray-200"
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
             >

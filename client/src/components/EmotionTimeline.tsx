@@ -27,13 +27,13 @@ export function EmotionTimeline({ timeOfDay, label, emoji, gradient }: EmotionTi
           <h3 className="text-white font-semibold text-2xl drop-shadow-md">{label}</h3>
         </div>
         
-        <div className="bg-white/40 backdrop-blur-sm rounded-xl p-4 min-h-[120px]">
+        <div className="bg-white/50 backdrop-blur-sm rounded-xl p-4 min-h-[120px]">
           <AnimatePresence>
             {emotionsForTime.length === 0 ? (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-white/80 text-center py-8 text-lg"
+                className="text-gray-600 text-center py-8 text-lg drop-shadow-sm"
               >
                 No emotions selected yet
               </motion.div>
@@ -60,9 +60,9 @@ export function EmotionTimeline({ timeOfDay, label, emoji, gradient }: EmotionTi
                       </div>
                       <button
                         onClick={() => removeEmotion(uniqueId)}
-                        className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                        className="absolute -top-2 -right-2 bg-white/90 rounded-full p-1 shadow-md opacity-0 group-hover:opacity-100 transition-opacity border border-gray-300"
                       >
-                        <X className="w-4 h-4 text-white" />
+                        <X className="w-4 h-4 text-gray-600" />
                       </button>
                     </motion.div>
                   );
