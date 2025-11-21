@@ -24,10 +24,10 @@ export function EmotionTimeline({ timeOfDay, label, emoji, gradient }: EmotionTi
       >
         <div className="flex items-center gap-3 mb-4">
           <span className="text-4xl">{emoji}</span>
-          <h3 className="text-white font-bold text-2xl drop-shadow-lg">{label}</h3>
+          <h3 className="text-white font-semibold text-2xl drop-shadow-md">{label}</h3>
         </div>
         
-        <div className="bg-white/30 backdrop-blur-sm rounded-xl p-4 min-h-[120px]">
+        <div className="bg-white/40 backdrop-blur-sm rounded-xl p-4 min-h-[120px]">
           <AnimatePresence>
             {emotionsForTime.length === 0 ? (
               <motion.div
@@ -50,11 +50,11 @@ export function EmotionTimeline({ timeOfDay, label, emoji, gradient }: EmotionTi
                       className="relative group"
                     >
                       <div
-                        className="flex items-center gap-2 px-4 py-3 rounded-xl shadow-md border-2 border-white"
+                        className="flex items-center gap-2 px-4 py-3 rounded-xl shadow-sm border-2 border-white/70"
                         style={{ backgroundColor: selected.emotion.color }}
                       >
                         <span className="text-3xl">{selected.emotion.emoji}</span>
-                        <span className="text-white font-semibold text-lg">
+                        <span className="text-white font-medium text-lg drop-shadow-sm">
                           {selected.emotion.label}
                         </span>
                       </div>

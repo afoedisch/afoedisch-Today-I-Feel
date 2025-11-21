@@ -77,7 +77,7 @@ function App() {
   };
 
   return (
-    <div className="w-full h-screen bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 overflow-y-auto overflow-x-hidden">
+    <div className="w-full h-screen bg-gradient-to-r from-amber-200 via-orange-200 to-teal-400 overflow-y-auto overflow-x-hidden">
       <SoundManager />
       
       <div className="container mx-auto px-4 py-8 pb-20">
@@ -88,14 +88,12 @@ function App() {
           className="text-center mb-8"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-300" />
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
-              My Feelings Today
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
+              Today I Feel...
             </h1>
-            <Sparkles className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-300" />
           </div>
-          <p className="text-white text-lg sm:text-xl md:text-2xl drop-shadow-md">
-            How did you feel today? Let's track your emotions!
+          <p className="text-white text-xl sm:text-2xl md:text-3xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)] font-light">
+            Let's explore your feelings together
           </p>
         </motion.div>
 
@@ -104,16 +102,15 @@ function App() {
           <Button
             onClick={() => setShowSummary(true)}
             size="lg"
-            className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-bold text-lg px-6 py-6 rounded-xl shadow-lg"
+            className="bg-white/90 hover:bg-white text-teal-700 font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white/50"
           >
-            <Sparkles className="w-5 h-5 mr-2" />
             View My Day
           </Button>
           <Button
             onClick={handleClearDay}
             size="lg"
             variant="outline"
-            className="bg-white/80 hover:bg-white text-purple-600 font-bold text-lg px-6 py-6 rounded-xl shadow-lg border-2 border-purple-300"
+            className="bg-white/70 hover:bg-white/90 text-teal-700 font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white"
           >
             <RotateCcw className="w-5 h-5 mr-2" />
             New Day
@@ -122,7 +119,7 @@ function App() {
             onClick={toggleMute}
             size="lg"
             variant="outline"
-            className="bg-white/80 hover:bg-white text-purple-600 font-bold text-lg px-6 py-6 rounded-xl shadow-lg border-2 border-purple-300"
+            className="bg-white/70 hover:bg-white/90 text-teal-700 font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white"
           >
             {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
           </Button>
@@ -133,9 +130,9 @@ function App() {
           <motion.h2
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-white font-bold text-2xl sm:text-3xl text-center mb-6 drop-shadow-lg"
+            className="text-white font-semibold text-3xl sm:text-4xl text-center mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]"
           >
-            1️⃣ Choose a time of day
+            Choose a time of day
           </motion.h2>
           <TimeOfDaySelector
             selectedTime={currentTimeOfDay}
@@ -152,8 +149,8 @@ function App() {
               exit={{ opacity: 0, y: -20 }}
               className="mb-8"
             >
-              <h2 className="text-white font-bold text-2xl sm:text-3xl text-center mb-6 drop-shadow-lg">
-                2️⃣ How did you feel?
+              <h2 className="text-white font-semibold text-3xl sm:text-4xl text-center mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+                How did you feel?
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-6xl mx-auto">
                 {EMOTIONS.map((emotion, index) => (
@@ -181,8 +178,8 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             className="space-y-6 max-w-6xl mx-auto"
           >
-            <h2 className="text-white font-bold text-2xl sm:text-3xl text-center mb-6 drop-shadow-lg">
-              📅 Your Emotions Timeline
+            <h2 className="text-white font-semibold text-3xl sm:text-4xl text-center mb-6 drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)]">
+              Your Feelings Today
             </h2>
             <EmotionTimeline
               timeOfDay="morning"

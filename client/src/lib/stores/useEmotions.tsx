@@ -32,17 +32,17 @@ export interface SelectedEmotion {
 }
 
 export const EMOTIONS: Emotion[] = [
-  { id: "happy", type: "happy", emoji: "😊", color: "#FFD93D", label: "Happy" },
-  { id: "excited", type: "excited", emoji: "🤩", color: "#FF6B9D", label: "Excited" },
-  { id: "proud", type: "proud", emoji: "😎", color: "#A78BFA", label: "Proud" },
-  { id: "loved", type: "loved", emoji: "🥰", color: "#F472B6", label: "Loved" },
-  { id: "calm", type: "calm", emoji: "😌", color: "#6EE7B7", label: "Calm" },
-  { id: "silly", type: "silly", emoji: "🤪", color: "#FDE047", label: "Silly" },
-  { id: "sad", type: "sad", emoji: "😢", color: "#60A5FA", label: "Sad" },
-  { id: "worried", type: "worried", emoji: "😰", color: "#C4B5FD", label: "Worried" },
-  { id: "angry", type: "angry", emoji: "😠", color: "#F87171", label: "Angry" },
-  { id: "scared", type: "scared", emoji: "😨", color: "#A78BFA", label: "Scared" },
-  { id: "other", type: "other", emoji: "✨", color: "#9CA3AF", label: "Other" },
+  { id: "happy", type: "happy", emoji: "😊", color: "#F9A825", label: "Happy" },
+  { id: "excited", type: "excited", emoji: "🤩", color: "#FB8C00", label: "Excited" },
+  { id: "proud", type: "proud", emoji: "😎", color: "#8E6BB8", label: "Proud" },
+  { id: "loved", type: "loved", emoji: "🥰", color: "#E57373", label: "Loved" },
+  { id: "calm", type: "calm", emoji: "😌", color: "#4DB6AC", label: "Calm" },
+  { id: "silly", type: "silly", emoji: "🤪", color: "#FFD54F", label: "Silly" },
+  { id: "sad", type: "sad", emoji: "😢", color: "#64B5F6", label: "Sad" },
+  { id: "worried", type: "worried", emoji: "😰", color: "#9FA8DA", label: "Worried" },
+  { id: "angry", type: "angry", emoji: "😠", color: "#EF5350", label: "Angry" },
+  { id: "scared", type: "scared", emoji: "😨", color: "#BA68C8", label: "Scared" },
+  { id: "other", type: "other", emoji: "✨", color: "#90A4AE", label: "Other" },
 ];
 
 interface EmotionState {
