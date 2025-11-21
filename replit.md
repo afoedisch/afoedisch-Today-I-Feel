@@ -4,6 +4,14 @@
 
 This is an interactive emotion tracking application designed for children to identify and record their feelings throughout the day. The application uses a colorful, engaging interface with emojis and animations to help kids express how they feel during different times of the day (morning, afternoon, evening). Built with React, TypeScript, and modern web technologies, it provides a safe, encouraging environment for emotional awareness and expression.
 
+## Recent Changes
+
+**November 21, 2025**: Fixed mobile scrolling issue
+- Changed main container from `min-h-screen` to `h-screen` with `overflow-y-auto overflow-x-hidden`
+- Added bottom padding (`pb-20`) to ensure all content is accessible
+- Issue: Users on mobile devices couldn't scroll down to see emotion cards after selecting a time of day
+- Solution: Enabled proper vertical scrolling by fixing container height and overflow properties
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
