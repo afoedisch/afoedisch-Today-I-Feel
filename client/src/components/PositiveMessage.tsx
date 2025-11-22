@@ -39,7 +39,7 @@ export function PositiveMessage({ show, emotionLabel }: PositiveMessageProps) {
           className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none"
         >
           <motion.div
-            className="bg-gradient-to-r from-[#FFAB91] via-[#FFD54F] to-[#80DEEA] text-white font-bold text-2xl sm:text-4xl px-8 py-6 rounded-3xl shadow-xl border-3 border-white/80"
+            className="bg-gradient-to-r from-[#E5D5C5] via-[#C8B8A8] to-[#A0B5C2] text-white font-bold text-2xl sm:text-4xl px-8 py-6 rounded-3xl shadow-xl border-3 border-white/80"
             animate={{
               scale: [1, 1.05, 1],
             }}

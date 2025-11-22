@@ -30,7 +30,7 @@ export function EmotionSummary() {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
-        className="bg-gradient-to-br from-[#FFAB91] via-[#FFD54F] to-[#80DEEA] rounded-3xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl border-3 border-white/80"
+        className="bg-gradient-to-br from-[#E5D5C5] via-[#C8B8A8] to-[#A0B5C2] rounded-3xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-xl border-3 border-white/80"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between mb-6">

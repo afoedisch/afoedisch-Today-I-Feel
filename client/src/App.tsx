@@ -77,7 +77,7 @@ function App() {
   };
 
   return (
-    <div className="w-full h-screen bg-gradient-to-r from-amber-200 via-orange-200 to-teal-400 overflow-y-auto overflow-x-hidden">
+    <div className="w-full h-screen bg-gradient-to-br from-[#E5D5C5] via-[#B8C5CE] to-[#94A8B5] overflow-y-auto overflow-x-hidden">
       <SoundManager />
       
       <div className="container mx-auto px-4 py-8 pb-20">
@@ -102,7 +102,7 @@ function App() {
           <Button
             onClick={() => setShowSummary(true)}
             size="lg"
-            className="bg-white/90 hover:bg-white text-teal-700 font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white/50"
+            className="bg-white/90 hover:bg-white text-[#7A8D9A] font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white/50"
           >
             View My Day
           </Button>
@@ -110,18 +110,18 @@ function App() {
             onClick={handleClearDay}
             size="lg"
             variant="outline"
-            className="bg-white/70 hover:bg-white/90 text-teal-700 font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white"
+            className="bg-white/70 hover:bg-white/90 text-[#7A8D9A] font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white"
           >
-            <RotateCcw className="w-5 h-5 mr-2 text-teal-600" />
+            <RotateCcw className="w-5 h-5 mr-2 text-[#7A8D9A]" />
             New Day
           </Button>
           <Button
             onClick={toggleMute}
             size="lg"
             variant="outline"
-            className="bg-white/70 hover:bg-white/90 text-teal-700 font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white"
+            className="bg-white/70 hover:bg-white/90 text-[#7A8D9A] font-semibold text-lg px-6 py-6 rounded-2xl shadow-md border-2 border-white"
           >
-            {isMuted ? <VolumeX className="w-5 h-5 text-teal-600" /> : <Volume2 className="w-5 h-5 text-teal-600" />}
+            {isMuted ? <VolumeX className="w-5 h-5 text-[#7A8D9A]" /> : <Volume2 className="w-5 h-5 text-[#7A8D9A]" />}
           </Button>
         </div>
 
@@ -185,19 +185,19 @@ function App() {
               timeOfDay="morning"
               label="Morning"
               emoji="🌅"
-              gradient="linear-gradient(135deg, #FFAB91 0%, #FFCC80 100%)"
+              gradient="linear-gradient(135deg, #D8C8BA 0%, #C4BFBA 100%)"
             />
             <EmotionTimeline
               timeOfDay="afternoon"
               label="Afternoon"
               emoji="☀️"
-              gradient="linear-gradient(135deg, #FFD54F 0%, #FFF59D 100%)"
+              gradient="linear-gradient(135deg, #C0B5AB 0%, #B8BAC0 100%)"
             />
             <EmotionTimeline
               timeOfDay="evening"
               label="Evening"
               emoji="🌙"
-              gradient="linear-gradient(135deg, #80DEEA 0%, #B2EBF2 100%)"
+              gradient="linear-gradient(135deg, #A0B5C2 0%, #B4C4D0 100%)"
             />
           </motion.div>
         )}

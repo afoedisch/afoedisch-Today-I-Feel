@@ -37,7 +37,7 @@
     overflow: auto;
     width: 100vw;
     min-height: 100vh;
-    background: linear-gradient(to right, #FFE0B2, #FFCC80, #4DB6AC);
+    background: linear-gradient(to bottom right, #E5D5C5, #B8C5CE, #94A8B5);
   }
 }
 

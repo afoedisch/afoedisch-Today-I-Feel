@@ -11,19 +11,19 @@ const TIME_OPTIONS: { id: TimeOfDay; label: string; emoji: string; gradient: str
     id: "morning", 
     label: "Morning", 
     emoji: "🌅", 
-    gradient: "linear-gradient(135deg, #FFAB91 0%, #FFCC80 100%)" 
+    gradient: "linear-gradient(135deg, #D8C8BA 0%, #C4BFBA 100%)" 
   },
   { 
     id: "afternoon", 
     label: "Afternoon", 
     emoji: "☀️", 
-    gradient: "linear-gradient(135deg, #FFD54F 0%, #FFF59D 100%)" 
+    gradient: "linear-gradient(135deg, #C0B5AB 0%, #B8BAC0 100%)" 
   },
   { 
     id: "evening", 
     label: "Evening", 
     emoji: "🌙", 
-    gradient: "linear-gradient(135deg, #80DEEA 0%, #B2EBF2 100%)" 
+    gradient: "linear-gradient(135deg, #A0B5C2 0%, #B4C4D0 100%)" 
   },
 ];
 

@@ -35,7 +35,7 @@ export function CustomEmotionDialog({ open, onOpenChange, onSubmit }: CustomEmot
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md bg-gradient-to-br from-[#FFE0B2] to-[#B2EBF2] border-3 border-white/80 shadow-xl">
+      <DialogContent className="sm:max-w-md bg-gradient-to-br from-[#E5D5C5] to-[#A0B5C2] border-3 border-white/80 shadow-xl">
         <DialogHeader>
           <DialogTitle className="text-3xl font-bold text-gray-700 text-center drop-shadow-sm">
             ✨ What Are You Feeling?
@@ -50,7 +50,7 @@ export function CustomEmotionDialog({ open, onOpenChange, onSubmit }: CustomEmot
             value={customEmotion}
             onChange={(e) => setCustomEmotion(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="text-lg px-4 py-6 border-2 border-gray-300 focus:border-[#80CBC4] bg-white shadow-sm"
+            className="text-lg px-4 py-6 border-2 border-gray-300 focus:border-[#94A8B5] bg-white shadow-sm"
             maxLength={20}
             autoFocus
           />
@@ -66,7 +66,7 @@ export function CustomEmotionDialog({ open, onOpenChange, onSubmit }: CustomEmot
               <Button
                 onClick={handleSubmit}
                 disabled={!customEmotion.trim()}
-                className="w-full text-lg py-6 bg-gradient-to-r from-[#FFB74D] to-[#80CBC4] hover:opacity-90 text-white font-semibold shadow-md"
+                className="w-full text-lg py-6 bg-gradient-to-r from-[#C8B8A8] to-[#94A8B5] hover:opacity-90 text-white font-semibold shadow-md"
               >
                 Add Feeling
               </Button>
