@@ -23,7 +23,7 @@ A mood tracking and emotional wellness application built with TypeScript that he
 
 ## Live Demo
 
-🔗 [View Live App on Replit](https://replit.com/@alixfoedisch/Today-I-Feel)
+🔗 [View Live App on Replit](https://today-i-feel-emotion-explorer-alixfoedisch.replit.app)
 
 ## Installation & Setup
 
